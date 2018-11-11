@@ -10,10 +10,7 @@ function setThisWithApply(fn, thisValue, args){
   return fn.apply(thisValue, args);
 }
 function returnNewFunctionOf(functionToBeCopied, thisValue){
-  
-  let x = setThisWithApply(functionToBeCopied, 
-  thisValue);
-  return x;
+  return functionToBeCopied.call(thisValue);
   
   
 }
