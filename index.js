@@ -10,6 +10,7 @@ function setThisWithApply(fn, thisValue, args){
   return fn.apply(thisValue, args);
 }
 function returnNewFunctionOf(functionToBeCopied, thisValue){
-  let newFunction = returnNewFunctionOf(functionToBeCopied, thisValue);  
+  let newFunction = functionToBeCopied;
+  return newFunction(functionToBeCopied, thisValue);  
   return newFunction();
 }
